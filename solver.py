@@ -21,8 +21,7 @@ grid = [input() for _ in range(0, 9)]
 if str(grid).count(" ") >= 72: grid = [list(map(int, grid[i].split())) for i in range(0, 9)]
 else: grid = [list(map(int, grid[i].replace(" ", ""))) for i in range(0, 9)]
 solve(grid, 0, 0)
-print("\n")
-print(" " + ("_" * 29))
+print("\n " + ("_" * 29))
 for i in range(0, 9):
 	print("|", end = " ")
 	for j in range(0, 9):
