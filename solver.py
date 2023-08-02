@@ -22,4 +22,15 @@ if str(grid).count(" ") >= 72: grid = [list(map(int, grid[i].split())) for i in 
 else: grid = [list(map(int, grid[i].replace(" ", ""))) for i in range(0, 9)]
 solve(grid, 0, 0)
 print("\n")
-for i in range(9): print(" ".join(list(map(str, grid[i]))))
+print(" " + ("_" * 29))
+for i in range(0, 9):
+	print("|", end = " ")
+	for j in range(0, 9):
+		if (j + 1) % 3 == 0:
+			print(grid[i][j], end = " | ")
+		elif j == 8:
+			print(grid[i][j], end = " ")
+		else:
+			print(grid[i][j], end = "  ")
+	print("" if (i + 1) % 3 != 0 or i == 8 else f"\n|{('-' * 9 + '|') * 3}")
+print(" " + ("‾" * 29))
