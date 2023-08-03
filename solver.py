@@ -25,11 +25,8 @@ print("\n " + ("_" * 29))
 for i in range(0, 9):
 	print("|", end = " ")
 	for j in range(0, 9):
-		if (j + 1) % 3 == 0:
-			print(grid[i][j], end = " | ")
-		elif j == 8:
-			print(grid[i][j], end = " ")
-		else:
-			print(grid[i][j], end = "  ")
+		if (j + 1) % 3 == 0: print(grid[i][j], end = " | ")
+		elif j == 8: print(grid[i][j], end = " ")
+		else: print(grid[i][j], end = "  ")
 	print("" if (i + 1) % 3 != 0 or i == 8 else f"\n|{('-' * 9 + '|') * 3}")
 print(" " + ("‾" * 29))
